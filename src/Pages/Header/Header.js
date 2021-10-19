@@ -18,12 +18,16 @@ const Header = () => {
                     <Navbar.Collapse className="justify-content-end">
                         <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                         <Nav.Link as={HashLink} to="/cancerTypes">Cancer Types</Nav.Link>
-                        <Nav.Link as={HashLink} to="/patients">Patient Section</Nav.Link>
+                        <Nav.Link as={HashLink} to="/appointments">Appointments</Nav.Link>
+                        <Nav.Link as={HashLink} to="/doctors">Doctors</Nav.Link>
 
                         {user?.email ?
                             <Button onClick={logOut} variant="info">Logout</Button>
                             :
                             <Nav.Link as={Link} to="/login">Login</Nav.Link>}
+                        <Navbar.Text>
+                            Signed in as: <Link to="/login">{user?.displayName}</Link>
+                        </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

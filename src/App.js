@@ -12,6 +12,10 @@ import AuthProvider from './Contexts/AuthProvider';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 import CancerTypes from './Pages/CancerTypes/CancerTypes';
+import Appoinments from './Pages/Appointments/Appoinments';
+import Doctors from './Doctors/Doctors';
+import Footer from './Footer/Footer';
+import ContactUs from './Pages/ContactUs/ContactUs';
 // import HeaderR from './Pages/Header/HeaderR';
 
 function App() {
@@ -20,7 +24,7 @@ function App() {
       <AuthProvider>
         <Router>
           <Header></Header>
-          {/* <HeaderR></HeaderR> */}
+
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -32,6 +36,16 @@ function App() {
               <CancerTypes></CancerTypes>
             </Route>
 
+            <PrivateRoute exact path="/appointments">
+              <Appoinments></Appoinments>
+            </PrivateRoute>
+            <PrivateRoute exact path="/doctors">
+              <Doctors></Doctors>
+            </PrivateRoute>
+
+            <Route exact path="/contact">
+              <ContactUs></ContactUs>
+            </Route>
             <PrivateRoute exact path="/details/:serviceId">
               <Details></Details>
             </PrivateRoute>
@@ -46,6 +60,7 @@ function App() {
               <NotFound></NotFound>
             </Route>
           </Switch>
+          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>

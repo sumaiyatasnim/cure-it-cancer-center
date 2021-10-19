@@ -17,7 +17,7 @@ const Login = () => {
     }
     return (
         <div className="container">
-            {/* <form onSubmit={userLogin}>
+            <form onSubmit={userLogin}>
                 <h2>Please Login</h2>
                 <div className="row mb-3">
                     <label htmlFor="inputEmail3" className="col-sm-2 col-form-label" >Email</label>
@@ -39,18 +39,18 @@ const Login = () => {
 
                 </div>
                 <button type="submit" className="btn btn-primary">Log In </button>
-            </form> */}
-            <div className="row mb-3">
+            </form>
+            {/* <div className="row mb-3">
 
 
                 <Link to="/register">Haven't Registered?</Link>
 
-            </div>
+            </div> */}
             <br />
             <div>
                 <h3>Or</h3>
             </div>
-            <button onClick={handleGoogleLogin} className="btn-success">Google Sign-in</button>
+            <button onClick={handleGoogleLogin} className="btn-warning">Google Sign-in</button>
         </div>
     );
 };
