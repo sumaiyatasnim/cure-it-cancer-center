@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "./cancerType.css"
 
-import "./service.css"
-const Service = (props) => {
-    const { name, img, id, overview } = props.homeService;
+const CancerType = (props) => {
+    const { name, overview, img, id } = props.type
     return (
-        <div className="container col-lg-4 col-md-6 col-sm-12 col-12">
+        <div className="container col-lg-4 col-md-6 col-sm-12 col-12 ">
             <div className="col">
-                <div className="card card-height">
+                <div className="card card-height mb-3">
                     <img className="homeServiceImg img-fluid" src={img} className="card-img-top" alt="..."></img>
                     <div className="card-body">
                         <h5 className="card-title">{name}</h5>
@@ -15,7 +15,7 @@ const Service = (props) => {
 
                     </div>
                     <div className="justify-content-center pb-4">
-                        <button className="btn-primary"><Link to={`/details/${id}`}><button className="btn-primary">See Details</button></Link></button>
+                        <button className="btn-primary "><Link to={`/details/${id}`}><button className="btn-primary">See Details</button></Link></button>
                     </div>
                 </div>
             </div>
@@ -25,5 +25,4 @@ const Service = (props) => {
     );
 };
 
-export default Service;
-
+export default CancerType;
