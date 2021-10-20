@@ -26,7 +26,7 @@ const Header = () => {
                             :
                             <Nav.Link as={Link} to="/register">Login</Nav.Link>}
                         <Navbar.Text className="text-dark">
-                            Signed in as: <Link to="/register">{user?.displayName || user.email}</Link>
+                            Signed in as: <Link to="/register" className="text-decoration-none text-success fw-bold">{user?.displayName || user.email}</Link>
                         </Navbar.Text>
                     </Navbar.Collapse>
                 </Container>

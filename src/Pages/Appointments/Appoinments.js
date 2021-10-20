@@ -4,8 +4,8 @@ const Appoinments = () => {
     return (
         <div className="container">
             <div className="row">
-                <div className="col-8">
-                    <h5>Step:1 Make an appointment.</h5>
+                <div className="col-lg-8 col-md-12 col-sm-12">
+                    <h5 className="text-primary">Step:1 Make an appointment.</h5>
                     <p>
                         You can request an appointment online or call us at 833-920-3234. International patients can call 212-639-4900 or use AT&T Direct Access by dialing the access number for the country you are calling from, then dialing 888-675-7722.
 
@@ -17,7 +17,7 @@ const Appoinments = () => {
 
                         You can receive care that’s closer to home. While some treatments can only be given at our main locations in New York City, more and more patients are receiving the vast majority of their care at our regional care locations in New York State and New Jersey. Our care advisers can discuss what services are offered in the location that’s most convenient for you.
                     </p>
-                    <h5>Step:2 Check your insurance.</h5>
+                    <h5 className="text-primary">Step:2 Check your insurance.</h5>
                     <p>
                         Cure it cancer hospital's doctors are in-network for many health insurance companies. Medicaid and New York State Medicare also provide benefits for care here.
 
@@ -30,8 +30,8 @@ const Appoinments = () => {
                         Learn more about insurance, including those insurance providers who have relationships with Cure it cancer hospital. And if you still have questions, call us at 646-497-9176.
                     </p>
                 </div>
-                <div className="col-4">
-                    <h4 className="text-primary">Making an appoinment</h4>
+                <div className="col-lg-4 col-md-12 col-sm-12">
+                    <h4 className="text-primary">Making an appointment</h4>
                     <h5 className="text-success">Meet Our Care Advisors</h5>
                     <p>
                         If you or someone you know has been diagnosed with cancer, contact our Patient Access Service for an appointment at one of our locations or from your own home via telemedicine. No referral necessary.

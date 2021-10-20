@@ -11,7 +11,7 @@ const CancerTypes = () => {
     return (
         <div className="container ">
             <h2 className="text-danger">Cancer Types</h2>
-            <div className="row cancerTypes">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-md-3 cancerTypes">
                 {
                     types.map(type => <CancerType
                         key={type.id}

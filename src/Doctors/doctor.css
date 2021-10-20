@@ -1,4 +1,7 @@
 .doctorImg{
-    height: 400px;
-    width: 400px;
+    height: 350px;
+    
+}
+.card-doctor{
+    box-shadow: 0 0 4px 2px #c0c0bd;
 }

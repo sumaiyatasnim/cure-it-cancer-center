@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './details.css'
 import { useParams } from 'react-router';
 
 const Details = () => {
@@ -19,7 +20,7 @@ const Details = () => {
 
     // const { name, overview, treatment, screening } = singleDetail;
     return (
-        <div className="container">
+        <div className="container details-container">
             <div className="card mb-3" >
                 <div className="row g-0">
                     <div className="col-md-4">

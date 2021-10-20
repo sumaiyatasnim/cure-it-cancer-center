@@ -5,21 +5,22 @@ import "./cancerType.css"
 const CancerType = (props) => {
     const { name, overview, img, id } = props.type
     return (
-        <div className="container col-lg-4 col-md-6 col-sm-12 col-12 ">
-            <div className="col">
-                <div className="card card-height mb-3">
-                    <img className="homeServiceImg img-fluid" src={img} className="card-img-top" alt="..."></img>
+        <div className="container  ">
+            <div className="col rounded-3 gy-3">
+                <div className="card h-100 mb-3 card card-style">
+                    <img src={img} className="card-img-top img-fluid homeServiceImg" alt="..."></img>
                     <div className="card-body">
-                        <h5 className="card-title">{name}</h5>
-                        <p className="card-text">{overview}</p>
+                        <h4 className="card-title text-danger"> {name} </h4>
+                        <p className="card-text ">
+                            Specialized in : {overview}
+                        </p>
 
                     </div>
                     <div className="justify-content-center pb-4">
-                        <button className="btn-primary "><Link to={`/details/${id}`}><button className="btn-primary">See Details</button></Link></button>
+                        <Link to={`/details/${id}`}><button className="btn btn-primary">See Details</button></Link>
                     </div>
                 </div>
             </div>
-
 
         </div>
     );

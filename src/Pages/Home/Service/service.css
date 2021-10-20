@@ -1,4 +1,7 @@
 .homeServiceImg{
-    height: 300px;
-    width: 400px;
+    height: 250px;
+}
+
+.card-style{
+    box-shadow: 0 0 4px 2px #c0c0bd;
 }
