@@ -50,9 +50,9 @@ function App() {
               <Details></Details>
             </PrivateRoute>
 
-            <Route exact path="/login">
+            {/* <Route exact path="/login">
               <Login></Login>
-            </Route>
+            </Route> */}
             <Route exact path="/register">
               <Register></Register>
             </Route>
