@@ -4,7 +4,7 @@ import useAuth from '../../Contexts/useAuth';
 
 const Register = () => {
 
-    const { createUser, handleEmailChange, handlePasswordChange, signInUsingGoogle, error, toggleLogin, isLogin, userLogin } = useAuth();
+    const { createUser, handleEmailChange, handlePasswordChange, signInUsingGoogle, error, toggleLogin, isLogin, handleResetPassword } = useAuth();
 
     const location = useLocation();
     const history = useHistory();
@@ -57,11 +57,12 @@ const Register = () => {
                     <p className="text-danger">{error}</p>
                 </div>
                 <button type="submit" className="btn btn-primary">{isLogin ? "Login" : "Register"}</button>
+                <button onClick={handleResetPassword} type="button" class="btn btn-secondary btn-sm">Reset Password</button>
             </form>
             <div>
                 <h3>Or</h3>
             </div>
-            <button onClick={handleGoogleLogin} className="btn-success">Google Sign-in</button>
+            <button onClick={handleGoogleLogin} className="btn btn-success mb-4">Google Sign-in</button>
         </div>
     );
 };

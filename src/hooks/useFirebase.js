@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signOut, onAuthStateChanged } from "firebase/auth";
+import { getAuth, signInWithPopup, createUserWithEmailAndPassword, signInWithEmailAndPassword, GoogleAuthProvider, signOut, onAuthStateChanged, sendEmailVerification, sendPasswordResetEmail } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../Pages/Login/Firebase/initializeAuthentication";
 
@@ -11,6 +11,7 @@ const useFirebase = () => {
     const [error, setError] = useState("")
     const [isloading, setIsLoading] = useState(true);
     const [isLogin, setIsLogin] = useState(false);
+
 
     const auth = getAuth();
 
@@ -39,6 +40,7 @@ const useFirebase = () => {
                 const user = result.user;
                 console.log(user);
                 setError("")
+                verifyEmail();
             })
             .catch((error) => {
                 setError(error.message)
@@ -54,6 +56,7 @@ const useFirebase = () => {
                 const user = result.user;
                 console.log(user);
                 setError("")
+
             })
             .catch((error) => {
                 setError(error.message)
@@ -85,6 +88,22 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
     }
 
+    // email verification
+    const verifyEmail = () => {
+        sendEmailVerification(auth.currentUser)
+            .then(result => {
+                console.log(result);
+            })
+    }
+
+    //reset password
+    const handleResetPassword = () => {
+        sendPasswordResetEmail(auth, email)
+            .then(result => {
+
+            })
+    }
+
     //observer
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
@@ -103,6 +122,7 @@ const useFirebase = () => {
         isloading,
         setIsLoading,
         handleEmailChange,
+        handleResetPassword,
         handlePasswordChange,
         createUser,
         registerNewUser,
